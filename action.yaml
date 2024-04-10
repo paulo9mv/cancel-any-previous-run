@@ -15,7 +15,7 @@ inputs:
 runs:
   using: composite
   steps:
-  - name: "Install the gh cli tool if not installed"
+  - name: "Install gh cli if not already installed"
     shell: bash
     run: ${{ github.action_path }}/deps.sh
 
