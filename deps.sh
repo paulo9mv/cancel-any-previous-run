@@ -6,7 +6,7 @@ if [ -x "$(command -v gh)" ]; then
     exit 0
 fi
 
-version=${GH_CLI_VERSION:-2.8.0}
+version=${GH_CLI_VERSION:-2.47.0}
 echo "Installing gh cli in version: $version"
 
 machine=$(uname -m)
