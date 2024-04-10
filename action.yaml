@@ -17,7 +17,7 @@ runs:
   steps:
   - name: "Install gh cli if not already installed"
     shell: bash
-    run: ${{ github.action_path }}/deps.sh
+    run: ${GITHUB_ACTION_PATH}/deps.sh
 
   - name: Cancel
     shell: bash
