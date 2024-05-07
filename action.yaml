@@ -1,4 +1,4 @@
-name: 'Cancel Previous Runs Action'
+name: 'Cancel Any Previous Run'
 description: 'Responsible to cancel previous runs for the current workflow or from a given list. Events (merge_group, pull_request, push)'
 branding:
   icon: 'alert-octagon'
