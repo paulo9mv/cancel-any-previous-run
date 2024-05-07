@@ -1,6 +1,6 @@
 This repository has been forked from https://github.com/PierreRAFFA/cancel-previous-runs-action ⚠️
 
-# Cancel Previous Runs Action 
+# Cancel Any Previous Run 
 
 This GitHub action is responsible to cancel any previous runs for the current workflow or from a given list.  
 It supports 3 events:  
