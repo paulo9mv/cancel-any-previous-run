@@ -1,27 +1,27 @@
-name: 'Cancel Any Previous Run'
-description: 'Responsible to cancel previous runs for the current workflow or from a given list. Events (merge_group, pull_request, push)'
+name: "Cancel Any Previous Run"
+description: "Responsible to cancel previous runs for the current workflow or from a given list. Events (merge_group, pull_request, push)"
 branding:
-  icon: 'alert-octagon'
-  color: 'green'
+  icon: "alert-octagon"
+  color: "green"
 inputs:
   workflow_names:
-    description: 'Specifies the list of workflow names to stop the runs'
+    description: "Specifies the list of workflow names to stop the runs"
     type: string
     required: false
   github_token:
-    description: 'Your GitHub Token, (Default: {{ github.token }} )'
+    description: "Your GitHub Token, (Default: {{ github.token }} )"
     default: ${{ github.token }}
     required: false
 runs:
   using: composite
   steps:
-  - name: "Install gh cli if not already installed"
-    shell: bash
-    run: ./deps.sh
+    - name: "Install gh cli if not already installed"
+      shell: bash
+      run: ${GITHUB_ACTION_PATH}/deps.sh
 
-  - name: Cancel
-    shell: bash
-    run: ./cancel.sh
-    env:
-      GH_TOKEN: ${{ inputs.github_token }}
-      WORKFLOW_NAMES: ${{ inputs.workflow_names }}
+    - name: Cancel
+      shell: bash
+      run: ${GITHUB_ACTION_PATH}/cancel.sh
+      env:
+        GH_TOKEN: ${{ inputs.github_token }}
+        WORKFLOW_NAMES: ${{ inputs.workflow_names }}
