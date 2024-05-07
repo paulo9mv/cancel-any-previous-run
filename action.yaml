@@ -17,11 +17,11 @@ runs:
   steps:
   - name: "Install gh cli if not already installed"
     shell: bash
-    run: ${GITHUB_ACTION_PATH}/deps.sh
+    run: ./deps.sh
 
   - name: Cancel
     shell: bash
-    run: ${GITHUB_ACTION_PATH}/cancel.sh
+    run: ./cancel.sh
     env:
       GH_TOKEN: ${{ inputs.github_token }}
       WORKFLOW_NAMES: ${{ inputs.workflow_names }}
